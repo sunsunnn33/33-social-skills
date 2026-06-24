@@ -3,226 +3,170 @@
 <h1>33-social-skills</h1>
 
 <p>
-  <b>拍完视频之后的所有事，交给 AI 做。</b><br/>
-  <i>Everything after you finish filming — let AI handle it.</i>
+  <b>视频拍完了，发布这件事交给 AI。</b><br/>
+  <i>Done filming? Let AI handle the publishing.</i>
 </p>
 
 <p>
-  <a href="#-这是什么">这是什么</a> ·
-  <a href="#-你做什么ai做什么">工作流</a> ·
-  <a href="#-支持平台">平台</a> ·
-  <a href="#-安装">安装</a>
+  <a href="#能帮你做什么">能做什么</a> ·
+  <a href="#你只需要做">你只需要做</a> ·
+  <a href="#安装">安装</a> ·
+  <a href="#支持平台">平台</a>
   &nbsp;|&nbsp;
-  <a href="#-what-is-this">English</a> ·
-  <a href="#-workflow">Workflow</a> ·
-  <a href="#-install">Install</a>
+  <a href="#what-it-does-for-you">English ↓</a>
 </p>
 
 </div>
 
 ---
 
-## 🇨🇳 中文
+## 能帮你做什么
 
-### 💡 这是什么
+**研究标签，不靠猜。**
+实时访问小红书、抖音、B站等平台的搜索页，拿到真实的播放量和热度数据，选出最有流量潜力的标签组合。
 
-一套让 AI 帮你完成视频发布全流程的工具包。
+**每个平台写一套文案，不是复制粘贴。**
+同一个视频，小红书要 20 字悬念标题 + 生活化口吻，抖音要 55 字情绪爆点，YouTube 要 SEO 关键词，Bilibili 要选分区……每个平台独立生成，规则全部内置。
 
-你只需要把拍好的视频、脚本和封面素材放进一个文件夹，告诉 AI 发哪几个平台，剩下的——研究标签、写文案、做封面、逐平台发布——AI 来做。
+**两个标题让你选，不满意继续改。**
+每个平台给出 A/B 两个切角不同的标题，也给出最佳发布时间建议。草稿里哪里不对，直接说，只改你指出的那个平台。
 
-**适合你，如果你：**
-- 在多个平台发布同一个视频内容
-- 每次发布都要花时间研究标签、改写文案，觉得枯燥
-- 想要一个助手帮你填好每个平台，你只负责最后点"发布"
+**帮你把封面做好。**
+告诉 AI 这期的主题和背景色，上传一张拍摄现场的照片，AI 生成符合你品牌风格的封面图，并自动裁剪成各平台所需比例。
+
+**打开浏览器，逐平台把东西填好。**
+上传视频、填标题、粘文案、加标签、配封面——每个平台做完停下来等你确认，你只需要点那个最后的"发布"按钮。
+
+**越用越懂你的账号。**
+每次发布完，AI 总结这次的经验更新账号记忆。下次再生成文案时，会自动带入你的风格偏好、历史有效标签和踩过的坑。
 
 ---
 
-### 🔄 你做什么，AI 做什么
+## 你只需要做
 
 ```
-你做的事                        AI 做的事
-──────────────────────────────────────────────────────
-拍好视频，准备好脚本和封面素材
-                                读取脚本，理解视频内容
-告诉 AI 发哪几个平台
-                                去各平台搜索真实的热门标签
-                                按每个平台的规则写专属文案
-                                给每个平台生成两个标题让你选
-看一眼草稿，确认或修改
-                                打开浏览器，逐平台上传视频
-                                填好标题、文案、标签、封面
-每个平台上手动点"发布"
-                                记录这次发布的情况
-下次发布时，AI 已经记住了
-你的账号风格和上次踩过的坑
+1. 拍好视频，整理好脚本
+2. 告诉 AI 要发哪些平台
+3. 看一眼文案草稿，哪里不对说哪里
+4. 在每个平台上点最后那个"发布"按钮
 ```
 
-**封面也可以交给 AI：**
-告诉 AI 这期的主题、选个背景色、上传一张运动照片，AI 直接生成封面图，还能自动裁剪成抖音、YouTube 等不同平台的比例。
+其他所有步骤，AI 来。
 
 ---
 
-### 📦 四个工具，一条流水线
-
-| 工具 | 你什么时候用它 | 它帮你做什么 |
-|------|-------------|------------|
-| `33-social-cover` | 发布前，做封面 | 问你几个问题，生成品牌风格封面图，自动裁多平台比例 |
-| `33-social-content` | 发布前，准备文案 | 读脚本 → 搜标签 → 写各平台文案 → 让你确认 |
-| `33-social-publish` | 文案确认后 | 打开浏览器，逐平台填写并等你点发布 |
-| `33-social-learn` | 每次发完后 | 总结这次经验，更新账号记忆，让下次发布更准 |
-
----
-
-### 🌏 支持平台
-
-小红书 · 抖音 · Bilibili · YouTube · 微信视频号 · 微博 · X (Twitter)
-
----
-
-### ⚡ 安装
+## 安装
 
 ```bash
 npx skills add sunsunnn33/33-social-skills
 ```
 
-或者直接告诉 AI：
-```
-帮我安装 https://github.com/sunsunnn33/33-social-skills
-```
+或者直接对 AI 说：`帮我安装 https://github.com/sunsunnn33/33-social-skills`
 
-**需要提前装好：**
-```bash
-brew install ffmpeg
-```
-以及 Chrome 浏览器（用你平时登录各平台的那个）。
+需要提前装好 `ffmpeg`（`brew install ffmpeg`）和 Chrome 浏览器。
 
 ---
 
-### ▶️ 怎么用
+## 支持平台
 
-装好后，直接用自然语言告诉 AI 你想做什么：
+小红书 · 抖音 · Bilibili · YouTube · 微信视频号 · 微博 · X
+
+---
+
+## 怎么说话
+
+装好后用自然语言就行，不需要记指令：
 
 ```
-"帮我准备 /Users/我/这期视频 的各平台发布内容"
+"帮我准备 /视频文件夹路径 的各平台发布内容"
 "发到小红书、抖音和 B 站"
-"帮我做封面"
+"帮我做这期封面"
 "开始发布"
 "复盘一下这次发布"
 ```
 
-不需要记命令，不需要填表格，跟 AI 说话就行。
+---
+
+## ⚠️ 注意
+
+通过浏览器操作社交平台有封号风险。建议先用小号测试，稳定后再用主号。
+
+---
+---
+
+## What It Does For You
+
+**Finds trending hashtags — no guessing.**
+Searches Xiaohongshu, Douyin, Bilibili and other platforms in real time to get actual view counts and trending data. Picks the hashtag combinations most likely to drive traffic.
+
+**Writes original captions for every platform — not copy-paste.**
+Same video, seven different captions. Xiaohongshu needs a 20-character curiosity hook and a casual tone. Douyin needs a punchy 55-character opener. YouTube needs SEO keywords. Each platform has its own rules — all built in.
+
+**Two title options per platform. Change what you don't like.**
+Get an A and a B version for each platform, each with a different angle. Also tells you the best time to post. Don't like something? Say which platform and what to change — only that part gets updated.
+
+**Makes your cover image.**
+Tell AI the topic and background color, upload a photo from your shoot. AI generates a cover that matches your brand style and automatically crops it to the right size for each platform.
+
+**Opens Chrome and fills everything in.**
+Uploads the video, fills in the title, pastes the caption, adds tags, sets the cover — then stops and waits for you to confirm before each platform. You click one button: Publish.
+
+**Gets smarter every time you use it.**
+After each publish session, AI logs what happened and updates its memory of your account. Next time, it already knows your voice, your best-performing tags, and what to avoid.
 
 ---
 
-### ⚠️ 注意
-
-通过浏览器自动化操作社交平台有一定风险。建议先用小号试用，确认稳定后再用主号。
-
----
-
-<br/>
-
-## 🌐 English
-
-### 💡 What Is This
-
-A toolkit that lets AI handle your entire video publishing workflow.
-
-Put your finished video, script, and cover image in a folder. Tell AI which platforms to publish to. Everything else — researching hashtags, writing captions, making covers, uploading to each platform — AI does it.
-
-**This is for you if you:**
-- Publish the same video across multiple platforms
-- Spend too much time rewriting captions and researching trending tags for each platform
-- Want an assistant to fill in everything so you just click "Publish"
-
----
-
-### 🔄 Workflow — What You Do vs. What AI Does
+## What You Need to Do
 
 ```
-You                             AI
-──────────────────────────────────────────────────────
-Film your video, prepare
-your script and cover image
-                                Reads your script, understands the content
-Tell AI which platforms to use
-                                Searches real trending tags on each platform
-                                Writes platform-specific captions from scratch
-                                Generates 2 title options per platform for you to pick
-Review the drafts, confirm
-or make edits
-                                Opens Chrome, uploads your video to each platform
-                                Fills in title, caption, tags, and cover image
-Click "Publish" on each platform
-                                Logs what happened this session
-Next time, AI already remembers
-your brand voice and past lessons
+1. Finish filming. Have your script ready.
+2. Tell AI which platforms you're posting to.
+3. Review the draft captions. Say what to change.
+4. Click "Publish" on each platform.
 ```
 
-**Cover images too:**
-Tell AI your topic, pick a background color, upload an action photo — AI generates a branded cover image and automatically crops it to the right ratio for each platform (9:16 for TikTok, 16:9 for YouTube, 3:4 for Xiaohongshu).
+Everything else, AI handles.
 
 ---
 
-### 📦 Four Skills, One Pipeline
+## Install
 
-| Skill | When You Use It | What It Does |
-|-------|----------------|--------------|
-| `33-social-cover` | Before publishing — make cover | Asks a few questions, generates a branded cover, crops to multi-platform ratios |
-| `33-social-content` | Before publishing — prepare captions | Reads script → researches tags → writes platform captions → waits for your approval |
-| `33-social-publish` | After captions are ready | Opens Chrome, fills in each platform, waits for you to click Publish |
-| `33-social-learn` | After each publish session | Summarizes what happened, updates account memory for next time |
+```bash
+npx skills add sunsunnn33/33-social-skills
+```
+
+Or tell your AI agent: `Install this for me: https://github.com/sunsunnn33/33-social-skills`
+
+Requires `ffmpeg` (`brew install ffmpeg`) and Chrome.
 
 ---
 
-### 🌏 Supported Platforms
+## Supported Platforms
 
 Xiaohongshu · Douyin · Bilibili · YouTube · WeChat Channels · Weibo · X (Twitter)
 
 ---
 
-### ⚡ Install
+## Just Talk
 
-```bash
-npx skills add sunsunnn33/33-social-skills
-```
-
-Or just tell your AI agent:
-```
-Install this for me: https://github.com/sunsunnn33/33-social-skills
-```
-
-**Prerequisites:**
-```bash
-brew install ffmpeg
-```
-Plus Chrome (the one where you're already logged into your social accounts).
-
----
-
-### ▶️ How to Use
-
-After installing, just talk to your AI agent in plain language:
+No commands to memorize. After installing, just say what you want:
 
 ```
-"Prepare publishing content for /Users/me/this-video"
-"Publish to Xiaohongshu, Douyin, and Bilibili"
+"Prepare publishing content for /path/to/my/video"
+"Post to Xiaohongshu, Douyin, and Bilibili"
 "Make a cover for this video"
 "Start publishing"
-"Let's review this publish session"
+"Let's review this session"
 ```
-
-No commands to memorize. No forms to fill. Just talk.
 
 ---
 
-### ⚠️ Heads Up
+## ⚠️ Heads Up
 
-Browser automation on social platforms carries some risk of account restrictions. Test with a secondary account first before using your main one.
+Automating social platforms carries some risk of account restrictions. Test with a secondary account before using your main one.
 
 ---
 
 <div align="center">
-<br/>
 MIT · by <a href="https://github.com/sunsunnn33">33</a>
 </div>
