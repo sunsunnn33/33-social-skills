@@ -199,8 +199,8 @@ Automating social platforms carries some risk of account restrictions. Test with
 
 **作者 / Author**
 
-[33](https://github.com/sunsunnn33) · 全栈创作者
+[33](https://github.com/sunsunnn33) · 自媒体人，做 Skill 系列是因为自己需要用
 
-MIT License · 欢迎 Star、Fork、提 Issue
+MIT License · Star · Fork · Issues
 
 </div>
