@@ -2,181 +2,227 @@
 
 <h1>33-social-skills</h1>
 
-<p><b>给 AI Agent 装上自媒体多平台发布能力的 Skill 系列。</b><br/>
-脚本进去，七平台文案出来，Chrome 自动发布，越用越懂你的账号。</p>
+<p>
+  <b>拍完视频之后的所有事，交给 AI 做。</b><br/>
+  <i>Everything after you finish filming — let AI handle it.</i>
+</p>
 
 <p>
-  <a href="#安装">⚡ 快速安装</a> ·
-  <a href="#四个-skill">📦 四个 Skill</a> ·
-  <a href="#支持平台">🌏 支持平台</a> ·
-  <a href="#使用">💬 使用方式</a>
+  <a href="#-这是什么">这是什么</a> ·
+  <a href="#-你做什么ai做什么">工作流</a> ·
+  <a href="#-支持平台">平台</a> ·
+  <a href="#-安装">安装</a>
+  &nbsp;|&nbsp;
+  <a href="#-what-is-this">English</a> ·
+  <a href="#-workflow">Workflow</a> ·
+  <a href="#-install">Install</a>
 </p>
 
 </div>
 
 ---
 
-视频创作本身就已经够费心了。拍完之后还有一件事同样重要、但极度枯燥——多平台分发：要研究每个平台的热门话题和流量标签，要把同一条内容改写成七种不同的风格和格式，小红书要 20 字悬念标题，抖音要 55 字情绪爆点，YouTube 要 SEO 关键词，Bilibili 要选分区……这些数据调研和重复适配的工作，没有技术含量，但不做又直接影响流量。
+## 🇨🇳 中文
 
-这个 Skill 系列干的就是这件事：**实时调研各平台流量数据 + 按平台规则生成专属文案 + 真实浏览器逐平台发布 + 每次发布后自动积累账号经验**。
+### 💡 这是什么
 
----
+一套让 AI 帮你完成视频发布全流程的工具包。
 
-## 四个 Skill
+你只需要把拍好的视频、脚本和封面素材放进一个文件夹，告诉 AI 发哪几个平台，剩下的——研究标签、写文案、做封面、逐平台发布——AI 来做。
 
-### `33-social-cover` — 封面制作
-
-| 能力 | 说明 |
-|------|------|
-| 品牌风格配置 | 通过 `COVER.md` 存储徽章、色系、标签等固定品牌元素，支持多账号复用 |
-| AI 直接生成封面 | 收集本期标题/副标题/色调/动作照片后，调用 `baoyu-danger-gemini-web` 直接出图 |
-| 生成封面提示词 | 也可只输出结构化 prompt，粘贴到即梦/可灵/Midjourney 等任何工具使用 |
-| 多平台比例裁剪 | 自动裁剪 3:4 → 9:16（抖音）/ 16:9（YouTube/Bilibili），缺边用品牌色补齐 |
-| 首次初始化 | 没有 COVER.md 时引导完成品牌档案设置 |
+**适合你，如果你：**
+- 在多个平台发布同一个视频内容
+- 每次发布都要花时间研究标签、改写文案，觉得枯燥
+- 想要一个助手帮你填好每个平台，你只负责最后点"发布"
 
 ---
 
-### `33-social-content` — 文案准备
-
-| 能力 | 说明 |
-|------|------|
-| 多格式脚本读取 | `.pages` `.docx` `.doc` `.txt` `.md` `.pdf` `.rtf` `.odt` `.fountain` `.fdx`，自动识别并提取文本 |
-| 平台专属文案生成 | 每个平台独立生成，不复制粘贴。标题字数、正文语气、标签格式均按平台规则处理 |
-| A/B 标题选项 | 每个平台生成两个切角不同的标题，选 A 还是 B 你来决定 |
-| 热门标签实时搜索 | 直接访问各平台搜索页，取真实播放量/浏览量数据选标签，不靠猜 |
-| 最佳发布时间建议 | 基于平台算法规律，每个平台给出具体时间段建议，写入 brief |
-| 封面自动匹配 | 按比例识别图片（16:9 / 9:16 / 3:4）分配给对应平台，找不到则提取视频第一帧 |
-| 账号风格记忆 | 自动读取 `ACCOUNT.md`，将你积累的平台经验用于当次文案生成 |
-| 输出 publish-brief.md | 记录每个平台的标题、正文、标签、封面、发布时间，供发布 skill 直接读取 |
-
----
-
-### `33-social-publish` — 多平台发布
-
-| 能力 | 说明 |
-|------|------|
-| 读取 publish-brief.md | 自动解析所有平台内容，无需重复输入 |
-| 真实浏览器操作 | 用你日常登录的 Chrome，天然携带登录态，不需要 API Key |
-| 定时发布支持 | 支持平台原生定时（Bilibili / YouTube / 视频号），不支持的到时间提醒手动点击 |
-| 逐平台执行 | 上传视频、匹配封面、填文案、加标签，每个平台独立完成 |
-| 发布前人工确认 | 每个平台停下来等你确认，不会自动提交任何内容 |
-| 发布日志 | 完成后写入 `publish-log.md`，记录每次发布结果，供学习 skill 读取 |
-
----
-
-### `33-social-learn` — 账号学习
-
-| 能力 | 说明 |
-|------|------|
-| 分析发布记录 | 读取 `publish-log.md`，提取每次发布的操作信号和内容判断 |
-| 结合用户反馈 | 主动询问这次发布有没有临时改动或特殊观察，补充客观记录无法捕捉的信息 |
-| Reflexion 提炼 | 每条有价值的信号整理为「发生了什么 / 可能原因 / 下次怎么做 / 触发条件」四段结构 |
-| 逐条确认机制 | 所有更新以「提案」形式展示，用户逐条采纳 / 跳过 / 修改，不自动写入任何内容 |
-| 更新 ACCOUNT.md | 将确认后的经验写入账号档案，下次 `33-social-content` 运行时自动读取 |
-| 首次初始化 | 没有 ACCOUNT.md 时，引导完成 5 个问题的账号基础档案设置 |
-
----
-
-## 数据流与文件关系
+### 🔄 你做什么，AI 做什么
 
 ```
-33-social-cover   ──生成──▶  封面图（3:4 / 9:16 / 16:9）
-       │                              │
-       │                              ▼
-       │              33-social-content  ──读──▶  ACCOUNT.md  ◀──写──  33-social-learn
-       │                     │                                                ▲
-       │                     │          输出                                  │
-       │                     ▼                                                │
-       └────────────▶  publish-brief.md  ──▶  33-social-publish ──写──▶  publish-log.md
+你做的事                        AI 做的事
+──────────────────────────────────────────────────────
+拍好视频，准备好脚本和封面素材
+                                读取脚本，理解视频内容
+告诉 AI 发哪几个平台
+                                去各平台搜索真实的热门标签
+                                按每个平台的规则写专属文案
+                                给每个平台生成两个标题让你选
+看一眼草稿，确认或修改
+                                打开浏览器，逐平台上传视频
+                                填好标题、文案、标签、封面
+每个平台上手动点"发布"
+                                记录这次发布的情况
+下次发布时，AI 已经记住了
+你的账号风格和上次踩过的坑
 ```
 
-封面做好→文案生成→发布→学习，四个 skill 首尾相连，每发布一次，账号经验就更新一次。
+**封面也可以交给 AI：**
+告诉 AI 这期的主题、选个背景色、上传一张运动照片，AI 直接生成封面图，还能自动裁剪成抖音、YouTube 等不同平台的比例。
 
 ---
 
-## 支持平台
+### 📦 四个工具，一条流水线
 
-| 平台 | 视频 | 图文 | 长文章 |
-|------|:----:|:----:|:------:|
-| 小红书 | ✓ | ✓ | — |
-| 抖音 | ✓ | ✓（图集）| — |
-| Bilibili | ✓ | ✓（动态）| ✓（专栏）|
-| YouTube | ✓ | — | — |
-| 微信视频号 | ✓ | ✓ | — |
-| 微博 | ✓ | ✓ | ✓（头条文章）|
-| X (Twitter) | ✓ | — | ✓（X Articles）|
+| 工具 | 你什么时候用它 | 它帮你做什么 |
+|------|-------------|------------|
+| `33-social-cover` | 发布前，做封面 | 问你几个问题，生成品牌风格封面图，自动裁多平台比例 |
+| `33-social-content` | 发布前，准备文案 | 读脚本 → 搜标签 → 写各平台文案 → 让你确认 |
+| `33-social-publish` | 文案确认后 | 打开浏览器，逐平台填写并等你点发布 |
+| `33-social-learn` | 每次发完后 | 总结这次经验，更新账号记忆，让下次发布更准 |
 
 ---
 
-## 安装
+### 🌏 支持平台
 
-**方式一：npx 一键安装（推荐）**
+小红书 · 抖音 · Bilibili · YouTube · 微信视频号 · 微博 · X (Twitter)
+
+---
+
+### ⚡ 安装
 
 ```bash
 npx skills add sunsunnn33/33-social-skills
 ```
 
-**方式二：让 Agent 帮你装**
-
+或者直接告诉 AI：
 ```
-帮我安装这个 skill：https://github.com/sunsunnn33/33-social-skills
+帮我安装 https://github.com/sunsunnn33/33-social-skills
 ```
 
-**方式三：手动**
-
+**需要提前装好：**
 ```bash
-git clone https://github.com/sunsunnn33/33-social-skills ~/.claude/skills/33-social-skills
+brew install ffmpeg
 ```
+以及 Chrome 浏览器（用你平时登录各平台的那个）。
 
 ---
 
-## 前置要求
+### ▶️ 怎么用
 
-```bash
-brew install ffmpeg                   # 视频处理 + 封面裁剪
-brew install oven-sh/bun/bun          # 脚本运行时
-npx skills add eze-is/web-access      # 平台标签热度搜索（可选，缺少时降级为内置知识）
-```
-
-- Google Chrome（用你日常登录的那个，各平台账号登录一次即可）
-- macOS（当前版本）
-
----
-
-## 使用
+装好后，直接用自然语言告诉 AI 你想做什么：
 
 ```
-# 第零步：做封面（可选，也可用现有封面）
-"帮我做这次视频的封面"
-"生成封面提示词"
-"把这张封面裁剪成抖音和 YouTube 的比例"
-
-# 第一步：准备文案
-"帮我准备 /Users/33/video-project 的发布文案"
-"这个文件夹的视频要发小红书、抖音和 YouTube，帮我写文案"
-
-# 第二步：发布
+"帮我准备 /Users/我/这期视频 的各平台发布内容"
+"发到小红书、抖音和 B 站"
+"帮我做封面"
 "开始发布"
-"只发小红书和 B 站"
-
-# 第三步：学习（每次发完都建议跑一次）
-"帮我复盘这次发布"
-"更新账号记忆"
+"复盘一下这次发布"
 ```
 
-第一次使用时，可以把仓库中的 `ACCOUNT-template.md` 和 `COVER-template.md` 复制到 `~/.33-skills/` 目录作为起点。
+不需要记命令，不需要填表格，跟 AI 说话就行。
 
 ---
 
-## ⚠️ 使用前提醒
+### ⚠️ 注意
 
-通过浏览器自动化操作社交平台存在账号被限流或封禁的风险。**建议先用小号测试，确认流程稳定后再用主号。**
+通过浏览器自动化操作社交平台有一定风险。建议先用小号试用，确认稳定后再用主号。
 
 ---
 
-## 关于 33-skills 系列
+<br/>
 
-`33-social-skills` 是自媒体内容分发系列。  
-所有 33 出品的 skill 均以 `33-` 开头，其他系列持续开发中。
+## 🌐 English
 
-MIT · 作者：[33](https://github.com/sunsunnn33)
+### 💡 What Is This
+
+A toolkit that lets AI handle your entire video publishing workflow.
+
+Put your finished video, script, and cover image in a folder. Tell AI which platforms to publish to. Everything else — researching hashtags, writing captions, making covers, uploading to each platform — AI does it.
+
+**This is for you if you:**
+- Publish the same video across multiple platforms
+- Spend too much time rewriting captions and researching trending tags for each platform
+- Want an assistant to fill in everything so you just click "Publish"
+
+---
+
+### 🔄 Workflow — What You Do vs. What AI Does
+
+```
+You                             AI
+──────────────────────────────────────────────────────
+Film your video, prepare
+your script and cover image
+                                Reads your script, understands the content
+Tell AI which platforms to use
+                                Searches real trending tags on each platform
+                                Writes platform-specific captions from scratch
+                                Generates 2 title options per platform for you to pick
+Review the drafts, confirm
+or make edits
+                                Opens Chrome, uploads your video to each platform
+                                Fills in title, caption, tags, and cover image
+Click "Publish" on each platform
+                                Logs what happened this session
+Next time, AI already remembers
+your brand voice and past lessons
+```
+
+**Cover images too:**
+Tell AI your topic, pick a background color, upload an action photo — AI generates a branded cover image and automatically crops it to the right ratio for each platform (9:16 for TikTok, 16:9 for YouTube, 3:4 for Xiaohongshu).
+
+---
+
+### 📦 Four Skills, One Pipeline
+
+| Skill | When You Use It | What It Does |
+|-------|----------------|--------------|
+| `33-social-cover` | Before publishing — make cover | Asks a few questions, generates a branded cover, crops to multi-platform ratios |
+| `33-social-content` | Before publishing — prepare captions | Reads script → researches tags → writes platform captions → waits for your approval |
+| `33-social-publish` | After captions are ready | Opens Chrome, fills in each platform, waits for you to click Publish |
+| `33-social-learn` | After each publish session | Summarizes what happened, updates account memory for next time |
+
+---
+
+### 🌏 Supported Platforms
+
+Xiaohongshu · Douyin · Bilibili · YouTube · WeChat Channels · Weibo · X (Twitter)
+
+---
+
+### ⚡ Install
+
+```bash
+npx skills add sunsunnn33/33-social-skills
+```
+
+Or just tell your AI agent:
+```
+Install this for me: https://github.com/sunsunnn33/33-social-skills
+```
+
+**Prerequisites:**
+```bash
+brew install ffmpeg
+```
+Plus Chrome (the one where you're already logged into your social accounts).
+
+---
+
+### ▶️ How to Use
+
+After installing, just talk to your AI agent in plain language:
+
+```
+"Prepare publishing content for /Users/me/this-video"
+"Publish to Xiaohongshu, Douyin, and Bilibili"
+"Make a cover for this video"
+"Start publishing"
+"Let's review this publish session"
+```
+
+No commands to memorize. No forms to fill. Just talk.
+
+---
+
+### ⚠️ Heads Up
+
+Browser automation on social platforms carries some risk of account restrictions. Test with a secondary account first before using your main one.
+
+---
+
+<div align="center">
+<br/>
+MIT · by <a href="https://github.com/sunsunnn33">33</a>
+</div>
