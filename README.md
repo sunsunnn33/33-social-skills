@@ -3,17 +3,16 @@
 <h1>33-social-skills</h1>
 
 <p>
-  <b>视频拍完了，发布这件事交给 AI。</b><br/>
-  <i>Done filming? Let AI handle the publishing.</i>
+  <b>给 AI Agent 装上自媒体多平台发布能力的 Skill 系列。</b><br/>
+  视频拍完了，发布这件事交给 AI——标签调研、文案改写、封面制作、逐平台发布，全包。
 </p>
 
 <p>
-  <a href="#能帮你做什么">能做什么</a> ·
-  <a href="#你只需要做">你只需要做</a> ·
-  <a href="#安装">安装</a> ·
-  <a href="#支持平台">平台</a>
-  &nbsp;|&nbsp;
-  <a href="#what-it-does-for-you">English ↓</a>
+  <a href="#能帮你做什么">🎯 能做什么</a> ·
+  <a href="#你只需要做">✅ 你只需要做</a> ·
+  <a href="#安装">⚡ 快速安装</a> ·
+  <a href="#支持平台">🌏 支持平台</a> ·
+  <a href="#what-it-does-for-you">🌐 English</a>
 </p>
 
 </div>
@@ -63,13 +62,17 @@ npx skills add sunsunnn33/33-social-skills
 
 或者直接对 AI 说：`帮我安装 https://github.com/sunsunnn33/33-social-skills`
 
-需要提前装好 `ffmpeg`（`brew install ffmpeg`）和 Chrome 浏览器。
+**需要提前装好：**
+```bash
+brew install ffmpeg
+```
+以及 Chrome 浏览器（用你平时登录各平台的那个）。
 
 ---
 
 ## 支持平台
 
-小红书 · 抖音 · Bilibili · YouTube · 微信视频号 · 微博 · X
+小红书 · 抖音 · Bilibili · YouTube · 微信视频号 · 微博 · X (Twitter)
 
 ---
 
@@ -92,6 +95,26 @@ npx skills add sunsunnn33/33-social-skills
 通过浏览器操作社交平台有封号风险。建议先用小号测试，稳定后再用主号。
 
 ---
+---
+
+<div align="center">
+
+<h2>🌐 English</h2>
+
+<p>
+  <b>A skill series that gives your AI agent the ability to publish content across social platforms.</b><br/>
+  Done filming? Hand off everything after — hashtag research, caption writing, cover design, and publishing — to AI.
+</p>
+
+<p>
+  <a href="#what-it-does-for-you">🎯 What It Does</a> ·
+  <a href="#what-you-need-to-do">✅ What You Do</a> ·
+  <a href="#install">⚡ Install</a> ·
+  <a href="#supported-platforms">🌏 Platforms</a>
+</p>
+
+</div>
+
 ---
 
 ## What It Does For You
@@ -137,7 +160,11 @@ npx skills add sunsunnn33/33-social-skills
 
 Or tell your AI agent: `Install this for me: https://github.com/sunsunnn33/33-social-skills`
 
-Requires `ffmpeg` (`brew install ffmpeg`) and Chrome.
+**Prerequisites:**
+```bash
+brew install ffmpeg
+```
+Plus Chrome (the one where you're already logged into your social accounts).
 
 ---
 
@@ -168,5 +195,12 @@ Automating social platforms carries some risk of account restrictions. Test with
 ---
 
 <div align="center">
-MIT · by <a href="https://github.com/sunsunnn33">33</a>
+<br/>
+
+**作者 / Author**
+
+[33](https://github.com/sunsunnn33) · 自媒体人，做 Skill 系列是因为自己需要用
+
+MIT License · 欢迎 Star、Fork、提 Issue
+
 </div>
